@@ -1,0 +1,46 @@
+__a relatively short guide to playing bedrock on macos__
+
+bedrock can actually run on a macbook! wow! crazy! and the best part is this method is completely free (aside from actually buying the game itself).
+
+this guide will be using a windows 11 virtual machine in vmware fusion. i'm too lazy to verify all the steps so just ask/send a screenshot/screenshare for help lmao
+
+**1. Installing VMware Fusion**visit this website and click "Download Now": https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
+yes, you will need to create a broadcom account. if they ask for a company and a reason, just say cams and something educational
+
+proceed with the installation as recommended (if you don't want to make an account, i could probably send you the file but idk if that's illegal lol)
+
+**2. Installing Windows 11**open vmware fusion and select "Get Windows from Microsoft".
+click through and wait for it to download.
+click through until you get to the encryption password. 
+just use whatever password you plan to have for the vm.
+click through until you get to "Finish".
+
+minecraft might run slow on 4gb and 2 cores so i changed mine to 8gb and 4 cores. do this by going to "Customize settings" (also the wrench icon on the vm window) and clicking on "Processors and Memory".
+
+**3. Running Windows 11 Without a Microsoft Account**if set up out of the box, windows will ask you to use a microsoft account. we will bypass this by using a local account from this guide: https://www.tomshardware.com/how-to/install-windows-11-without-microsoft-account
+_ _
+when you first start the vm, it will say "Press any key to boot from a CD or DVD". it is very important that you press a key very quickly, otherwise it may not boot and you may have to redo the installation process.
+
+click through and check "I understand everything will be deleted".
+click through and wait for windows 11 to install.
+
+at this point, you'll be at the "choose a country" screen. the next few steps will disable the network.
+hit Shift + F10 (might need to use the fn key) and enter the command "OOBE\BYPASSNRO".
+after it restarts, hit Shift + F10 again and enter the command "ipconfig /release". 
+
+continue with the setup. yes, they ask for a password and security questions but it's probably not that serious. i disable all the privacy options because why do i need them?
+
+you may notice that the screen is fixed at a certain aspect ratio. to make it adaptive, click "Virtual Machine" in the menu bar and "Install VMWare Tools". follow the instructions to run it (the vm may restart)
+
+to re-enable internet connection, open Command Prompt and enter the command "ipconfig /renew".
+
+**4. Installing and Running Minecraft**visit the minecraft website and click "Download for Windows": https://www.minecraft.net/en-us/download
+run the installer and try to launch minecraft.
+
+at this point, you may run into an error with the code 0xc000007b. i found a fix that worked from this video: https://www.youtube.com/watch?v=O1CkyEogN3c
+basically just install visual c++ from this link: https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/
+then unzip the file and run the file called "install_all". click "Yes" for all the pop-ups for the installations.
+
+now you should be all set to run the minecraft launcher! just sign in, go to "Minecraft for Windows", and download the latest update. if you don't have a minecraft account... why did you go through all this? go buy it if you want to play.
+
+have fun playing bedrock on an actual device!
